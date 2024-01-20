@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>replit</title>
+  <link href="C:\Users\jbrou\Neon_Portfolio\style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Kaushan+Script&family=Playfair+Display+SC&family=Poppins:wght@300;400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <title>PortFolio</title>
+
+</head>
+
+    <body>
+      <!--Nagigation-->
+      <nav id="Navigation">
+        <div class="container">
+          <div class="row aligncenter justifybetween">
+            <input type="checkbox" id="click">
+            <div class="logo">
+              <h1><span>My </span><i>J</i><span>ourney</span></h1>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="#Home" data-text="Home">Home</a></li>
+                <li><a href="#AboutMe" data-text="About Me">About Me</a></li>
+                <li><a href="#Projects" data-text="Projects">Projects</a></li>
+                <li><a href="#Services" data-text="Services">Services</a></li>
+                <li><a href="#Contact" data-text="Contact">Contact</a></li>
+              </ul>
+            </div>
+            <label for="click">
+              <div class="mobilemenu">
+                <ion-icon name="grid-outline"></ion-icon>
+              </div>
+            </label>
+          </div>
+        </div>
+      </nav>
+
+      <!--Homepage-->
+    <section id="Home">
+        <div class="container">
+            <div class="row aligncenter">
+                <div class="homecontent">
+                    <div class="homeleft">
+                        <h1 class="heytyping">
+                            <span>J</span>acob's <span class="typed"></span>
+                        </h1>
+                        <h2 class="hey">
+                            <!-- "Burn The Ships" -->
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script>
+                $(function () {
+                    setTimeout(function() {
+                        new Typed('.typed', {
+                            strings: [
+                                "Playground",
+                                "Portfolio",
+                                "Projects",
+                                "Polarizing Poetry?",
+                            ],
+                            typeSpeed: 50,
+                            backSpeed: 50,
+                            loop: true
+                        });
+                    }, 4300); 
+                });
+        </script>
+    </section>
+
+    <!--About Me-->
+    <section id="AboutMe">
+        <div class="container" style="padding:150px;">
+            <div class="row">
+                <div class="sectiontitle">
+                    <span>W</span>
+                    <span>H</span>
+                    <span>O</span>
+                    <span>&nbsp;</span>
+                    <span>A</span>
+                    <span>M</span>
+                    <span>&nbsp;</span>
+                    <span>I</span>
+                    <span>?</span>
+                </div>
+            </div>
+        </div>
+
+<style>
+.image22 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transform: scale(1.8);
+    animation: scaleImage 13s infinite ease-out forwards;
+}
+
+.text22 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: calc(10px + 8vw);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    animation: fadeInText 3s 2s ease-out forwards;
+}
+
+@keyframes scaleImage {
+    100% {  
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+    </style>
+    <script>
+        function startAnimation(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadeInText', 'scaleImage');
+                } else {
+
+                    entry.target.classList.add('resetImage');
+                    // entry.target.classList.remove('fadeInText');
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(startAnimation, {
+            root: null, 
+            threshold: 0.5 
+        });
+
+        const imageElement = document.querySelector('.image22');
+        const textElement = document.querySelector('.text22');
+
+        observer.observe(imageElement);
+        observer.observe(textElement);
+    </script>
+    </script>
+    </style>
+                </div>
+                <div class="typewriter">
+                  <div class="typing">
+                    <div class="static" style="color:white";>
+
+                    <h1 class="text"><img src="https://source.unsplash.com/wpU4veNGnHg/1920x1080" alt="" class="image22">
+    I'm a </h1>
+                    </div>
+                    <div class="dynamic text22">
+                      <li> <span>Coder</span></li>
+                      <li> <span>Designer</span></li>
+                      <li><span>Developer</span></li>
+                      <li><span>Programmer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="jacobo" style="padding:150px; background:#262626; opacity:.68">
+            <span>Hello</span>! My name is <span>Jacob</span> or <i><span>Jake From IT</span>..</i> (one day it'll be as common as the State 
+                Farm Jake-slogan... Just wait).</span>I grew up in Plano, TX and then took a leap and moved to the best part of California (Bay Area) when I was 19. What a beautiful place to live but I only chose to stay there for a few years. Eventually I found myself home-sick and came back to good ol' Texas.
+                <br>
+                <br>
+                I have been in a hybrid position before comprised of a part-time junior
+                web developer while also doing another role nearly full-time for the same company (which was more geared towards 
+                sales than IT). I'm excited for the growth to come and the opportunity that it leaves with me as I'll be sharing 
+                my own <span>projects </span>as I complete them. My Github link will be the best way to access my back-end projects and
+                then my front end...well.. you know.
+          </div>
+        </div>
+                <script>
+                    $(function () {
+                        $(".typed").typed({
+                            strings: ["Playground", "Portfolio", "Projects", "Positively Poppin Idea's", "Poetry..? What's that doing here?"],
+                            typeSpeed: 3.3,
+                            loop: true
+                        });
+
+                    });
+                </script>
+      </section>
+
+      <section id="Projects" style="margin-top:68vh; padding:200px;z-index:2;">
+        <div class="container">
+          <div class="row">
+            <div class="sectiontitle proj">
+              <span>P</span>
+              <span>R</span>
+              <span>O</span>
+              <span>J</span>
+              <span>E</span>
+              <span>C</span>
+              <span>T</span>
+              <span>S</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="projectpart">
+              <div class="imgbox">
+            </div>
+            </div>
+            <div class="row">
+                <div class="grid-container">
+                    <div class="grid-item" style="height: 16vh; width: 18.3vw; background-image: url('/xtremesc.png') !important; background-size: 400px; box-shadow: 1px 2px 8px 1px #33ff00, 1px 4px 8px 2px #ffffff "></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                </div>
+            </div>
+      </section>
+
+      <!-- Services-->
+
+      <section id="Services">
+        <div class="container">
+          <div class="row">
+            <div class="sectiontitle">
+              <span>S</span>
+              <span>E</span> <span>R</span> <span>V</span> <span>I</span> <span>C</span> <span>E</span> <span>S</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="servicepart">
+              <img src="Pattern.png" alt="Pattern.png">
+              <div class="card">
+                <ion-icon name="globe-outline"></ion-icon>
+                <h2>Software Development</h2>
+                <p>As a relatively new back-end developer I'm hungry to build! If you have have a concept or an app idea that you would like brought to life submit your dets on my contact form and let's collaborate.</p>
+              </div>
+            </div>
+            <div class="box">
+              &nbsp;
+            </div>
+            <div class="servicepart">
+              <div class="card">
+                <img src="Pattern.png" alt="Pattern.png">
+                <ion-icon name="create-outline"></ion-icon>
+                <h2>Web Development</h2>
+                <p>With a professional background in web development and design, I'll always have a love and passion for creating a product -on the web- like no other. As time progresses and more venture into the UI/UX space one would think possitibilies are dwindling but the opposite is true. The spaces that certain teams have created are just absolutely breathtaking and that's what any web developer should strive to achieve</p>
+              </div>
+            </div>
+            <div class="box">
+              &nbsp;
+            </div>
+            <div class="servicepart">
+              <img src="Pattern.png" alt="Pattern.png">
+              <div class="card">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+                <h2>App Development</h2>
+                <p>I've begun building desktop and mobile (IOS/Android) applications in my journey so far using Python and it is probably going to sound nerdy but I can't get enough of it. In fact, if I'm working on an application and am either learning new content (i.e. A new framework) or even if I'm just strengthening my existing familiarity - you'll probably find me awake until 3 AM and then back at it again by 8 or 9 AM the next morning... Somehow still remaining quite efficient. It's such a thrill when you get to watch your baby (the app) update line-by-line (most of the time) as you piece function by function together</p>
+              </div>
+            </div>
+            <div class="box">
+              &nbsp;
+            </div>
+            <div class="servicepart">
+              <img src="Pattern.png" alt="Pattern.png">
+              <div class="card">
+                <ion-icon name="brush-outline"></ion-icon>
+                <h2>Cloud Integration</h2>
+                <p>Currrently, I'm working on obtaining one of the AWS certifications (Solutions Architect) as I'm always eager to learn as much as I can about the IT industry. I want to be able to be the point man from A to Z... Stay Tuned!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact-->
+      <section id="Contact" style="background-color: white">
+        <div class="container">
+          <div class="row">
+            <div class="sectiontitle">
+              <span>C</span>
+              <span>O</span>
+              <span>N</span> <span>T</span> <span>A</span> <span>C</span> <span>T</span>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/mzbqzony" method="POST">
+            <div class="row">
+              <div class="rows100">
+                <div class="col">
+                  <div class="inputbox">
+                    <input type="text" name="First Name" required>
+                    <span class="text">First Name</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="inputbox">
+                    <input type="text" name="Last Name" required>
+                    <span class="text">Last Name</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rows100">
+                <div class="col">
+                  <div class="inputbox">
+                    <input type="email" name="Email Address" required>
+                    <span class="text">Email Address</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="inputbox">
+                    <input type="text" name="Phone number" required>
+                    <span class="text">Phone Number</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="rows100">
+                <div class="col">
+                  <div class="inputbox textarea">
+                    <textarea name="Message" id="" cols="30" rows="10" required></textarea>
+                    <span class="text">Message</span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="rows100">
+                <div class="col">
+                  <button class="btn" type="submit" value="Send">Send</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!--Footer-->
+      <section id="Footer">
+        <div class="container">
+          <div class="row justifyaround aligncenter">
+            <div class="footercontent icons">
+              <ion-icon name="logo-twitter" id="twitter"></ion-icon>
+            </div>
+            <div class="footercontent icons">
+              <ion-icon name="logo-facebook" id="facebook"></ion-icon>
+            </div>
+            <div class="footercontent">
+              <h4>Copyright &copy; Jacob Broussard 2023</h4>
+            </div>
+            <div class="footercontent icons">
+              <ion-icon name="logo-github" id="github"></ion-icon>
+            </div>
+            <div class="footercontent icons">
+              <ion-icon name="logo-instagram" id="instagram"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </body>
+
+    </html> 
